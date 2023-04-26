@@ -1,6 +1,6 @@
 import { styled, withStyle } from "styletron-react";
 import Button, { StyledRoot } from "./common/Button";
-import { CMDS, NUMS, OPS } from "../constants/types";
+import { CMDS, NUMS, OPS } from "../constants/actions";
 
 const Root = styled('section', {
     // outline: '2px solid yellow',

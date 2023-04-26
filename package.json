@@ -1,12 +1,13 @@
 {
     "name": "anticalculator",
     "version": "1.0.0",
-    "main": "index.js",
     "repository": "https://github.com/maxshymchuk/anticalculator.git",
     "author": "Max Shymchuk <octorix@mail.ru>",
     "license": "MIT",
     "source": "index.html",
+    "homepage": "https://maxshymchuk.github.io/anticalculator/",
     "scripts": {
+        "deploy": "parcel build --public-url . && gh-pages -d dist",
         "serve": "parcel"
     },
     "dependencies": {
@@ -16,6 +17,7 @@
         "styletron-react": "^6.1.0"
     },
     "devDependencies": {
+        "gh-pages": "^5.0.0",
         "parcel": "^2.8.3",
         "process": "^0.11.10"
     }
