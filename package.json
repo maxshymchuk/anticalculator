@@ -1,0 +1,22 @@
+{
+    "name": "anticalculator",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/maxshymchuk/anticalculator.git",
+    "author": "Max Shymchuk <octorix@mail.ru>",
+    "license": "MIT",
+    "source": "index.html",
+    "scripts": {
+        "serve": "parcel"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "styletron-engine-atomic": "^1.5.0",
+        "styletron-react": "^6.1.0"
+    },
+    "devDependencies": {
+        "parcel": "^2.8.3",
+        "process": "^0.11.10"
+    }
+}
