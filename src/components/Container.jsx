@@ -1,6 +1,6 @@
 import { styled } from 'styletron-react';
 import ResultArea from './ResultArea';
-import Buttons from './Buttons';
+import Buttons from './buttons/Buttons';
 
 const Root = styled('section', {
     display: 'flex',

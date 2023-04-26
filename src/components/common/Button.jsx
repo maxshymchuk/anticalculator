@@ -6,10 +6,11 @@ export const StyledRoot = styled('div', {
     alignItems: 'center',
     borderRadius: '10vh',
     textAlign: 'center',
-    fontSize: '4vh',
+    fontSize: '5vh',
     backgroundColor: '#343434',
     userSelect: 'none',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    color: '#fff',
 });
 
 export default function Button({ Root = StyledRoot, children, ...props }) {

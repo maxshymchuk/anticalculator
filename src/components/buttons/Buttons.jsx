@@ -1,6 +1,7 @@
-import { styled, withStyle } from "styletron-react";
-import Button, { StyledRoot } from "./common/Button";
-import { CMDS, NUMS, OPS } from "../constants/actions";
+import {styled, withStyle} from "styletron-react";
+import Button, { StyledRoot } from "../common/Button";
+import { CMDS, NUMS, OPS } from "../../constants/actions";
+import ZeroButton from "./components/ZeroButton";
 
 const Root = styled('section', {
     // outline: '2px solid yellow',
@@ -12,12 +13,13 @@ const Root = styled('section', {
 
 const StyledButtonCommand = withStyle(StyledRoot, {
     backgroundColor: '#a5a5a5',
-    color: '#000000'
-})
+    color: '#000000',
+    fontSize: '4vh',
+});
 
 const StyledButtonOperation = withStyle(StyledRoot, {
     backgroundColor: '#f2a33c',
-})
+});
 
 const ButtonCommand = (props) => <Button Root={StyledButtonCommand} data-type='command' {...props} />;
 const ButtonOperation = (props) => <Button Root={StyledButtonOperation} data-type='operation' {...props} />;
@@ -49,7 +51,7 @@ export default function Buttons({ children, ...props }) {
 
             <ButtonOperation>{OPS.Add}</ButtonOperation>
 
-            <Button $style={{ gridColumn: '1 / span 2' }}>{NUMS[0]}</Button>
+            <ZeroButton>{NUMS[0]}</ZeroButton>
             <Button>{NUMS[',']}</Button>
 
             <ButtonOperation>{OPS.Equ}</ButtonOperation>
