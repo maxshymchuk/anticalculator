@@ -29356,9 +29356,16 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _styletronReact = require("styletron-react");
 var _container = require("./components/Container");
 var _containerDefault = parcelHelpers.interopDefault(_container);
+var _pragmaticaExtraLightTtf = require("url:/static/Pragmatica-ExtraLight.ttf");
+var _pragmaticaExtraLightTtfDefault = parcelHelpers.interopDefault(_pragmaticaExtraLightTtf);
 const Wrapper = (0, _styletronReact.styled)("div", {
-    width: "100vw",
-    height: "100vh",
+    fontFamily: {
+        src: `url(${(0, _pragmaticaExtraLightTtfDefault.default)})`,
+        fontWeight: "normal",
+        fontStyle: "normal"
+    },
+    width: "100%",
+    height: "100%",
     overflow: "hidden",
     backgroundColor: "#000000",
     position: "relative"
@@ -29368,12 +29375,12 @@ function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Wrapper, {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _containerDefault.default), {}, void 0, false, {
             fileName: "src/App.jsx",
-            lineNumber: 15,
+            lineNumber: 21,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "src/App.jsx",
-        lineNumber: 14,
+        lineNumber: 20,
         columnNumber: 9
     }, this);
 }
@@ -29388,7 +29395,7 @@ $RefreshReg$(_c1, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","styletron-react":"fmhJC","./components/Container":"QNfzH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"QNfzH":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","styletron-react":"fmhJC","./components/Container":"QNfzH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","url:/static/Pragmatica-ExtraLight.ttf":"2EjYs"}],"QNfzH":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2ee0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -29401,7 +29408,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _styletronReact = require("styletron-react");
 var _resultArea = require("./ResultArea");
 var _resultAreaDefault = parcelHelpers.interopDefault(_resultArea);
-var _buttons = require("./Buttons");
+var _buttons = require("./buttons/Buttons");
 var _buttonsDefault = parcelHelpers.interopDefault(_buttons);
 const Root = (0, _styletronReact.styled)("section", {
     display: "flex",
@@ -29449,7 +29456,7 @@ $RefreshReg$(_c1, "Container");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","styletron-react":"fmhJC","./ResultArea":"8dv3p","./Buttons":"3gFnG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8dv3p":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","styletron-react":"fmhJC","./ResultArea":"8dv3p","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./buttons/Buttons":"k655I"}],"8dv3p":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bf38 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -29622,20 +29629,22 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"6c6bab40dcda8a33":"786KC"}],"3gFnG":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$2e05 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"6c6bab40dcda8a33":"786KC"}],"k655I":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9bc3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$2e05.prelude(module);
+$parcel$ReactRefreshHelpers$9bc3.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _styletronReact = require("styletron-react");
-var _button = require("./common/Button");
+var _button = require("../common/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _types = require("../constants/types");
+var _actions = require("../../constants/actions");
+var _zeroButton = require("./components/ZeroButton");
+var _zeroButtonDefault = parcelHelpers.interopDefault(_zeroButton);
 const Root = (0, _styletronReact.styled)("section", {
     // outline: '2px solid yellow',
     display: "grid",
@@ -29646,7 +29655,8 @@ const Root = (0, _styletronReact.styled)("section", {
 _c = Root;
 const StyledButtonCommand = (0, _styletronReact.withStyle)((0, _button.StyledRoot), {
     backgroundColor: "#a5a5a5",
-    color: "#000000"
+    color: "#000000",
+    fontSize: "4vh"
 });
 _c1 = StyledButtonCommand;
 const StyledButtonOperation = (0, _styletronReact.withStyle)((0, _button.StyledRoot), {
@@ -29658,8 +29668,8 @@ const ButtonCommand = (props)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _but
         "data-type": "command",
         ...props
     }, void 0, false, {
-        fileName: "src/components/Buttons.jsx",
-        lineNumber: 22,
+        fileName: "src/components/buttons/Buttons.jsx",
+        lineNumber: 24,
         columnNumber: 34
     }, undefined);
 _c3 = ButtonCommand;
@@ -29668,8 +29678,8 @@ const ButtonOperation = (props)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _b
         "data-type": "operation",
         ...props
     }, void 0, false, {
-        fileName: "src/components/Buttons.jsx",
-        lineNumber: 23,
+        fileName: "src/components/buttons/Buttons.jsx",
+        lineNumber: 25,
         columnNumber: 36
     }, undefined);
 _c4 = ButtonOperation;
@@ -29678,145 +29688,142 @@ function Buttons({ children , ...props }) {
         ...props,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ButtonCommand, {
-                children: (0, _types.CMDS).Clear
+                children: (0, _actions.CMDS).Clear
             }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
-                lineNumber: 28,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ButtonCommand, {
-                children: (0, _types.CMDS).Reverse
-            }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
-                lineNumber: 29,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ButtonCommand, {
-                children: (0, _types.CMDS).Percentage
-            }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
+                fileName: "src/components/buttons/Buttons.jsx",
                 lineNumber: 30,
                 columnNumber: 13
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ButtonOperation, {
-                children: (0, _types.OPS).Div
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ButtonCommand, {
+                children: (0, _actions.CMDS).Reverse
             }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
+                fileName: "src/components/buttons/Buttons.jsx",
+                lineNumber: 31,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ButtonCommand, {
+                children: (0, _actions.CMDS).Percentage
+            }, void 0, false, {
+                fileName: "src/components/buttons/Buttons.jsx",
                 lineNumber: 32,
                 columnNumber: 13
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                children: (0, _types.NUMS)[7]
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ButtonOperation, {
+                children: (0, _actions.OPS).Div
             }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
+                fileName: "src/components/buttons/Buttons.jsx",
                 lineNumber: 34,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                children: (0, _types.NUMS)[8]
+                children: (0, _actions.NUMS)[7]
             }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
-                lineNumber: 35,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                children: (0, _types.NUMS)[9]
-            }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
+                fileName: "src/components/buttons/Buttons.jsx",
                 lineNumber: 36,
                 columnNumber: 13
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ButtonOperation, {
-                children: (0, _types.OPS).Mul
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                children: (0, _actions.NUMS)[8]
             }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
-                lineNumber: 38,
+                fileName: "src/components/buttons/Buttons.jsx",
+                lineNumber: 37,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                children: (0, _types.NUMS)[4]
+                children: (0, _actions.NUMS)[9]
             }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
+                fileName: "src/components/buttons/Buttons.jsx",
+                lineNumber: 38,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ButtonOperation, {
+                children: (0, _actions.OPS).Mul
+            }, void 0, false, {
+                fileName: "src/components/buttons/Buttons.jsx",
                 lineNumber: 40,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                children: (0, _types.NUMS)[5]
+                children: (0, _actions.NUMS)[4]
             }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
-                lineNumber: 41,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                children: (0, _types.NUMS)[6]
-            }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
+                fileName: "src/components/buttons/Buttons.jsx",
                 lineNumber: 42,
                 columnNumber: 13
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ButtonOperation, {
-                children: (0, _types.OPS).Sub
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                children: (0, _actions.NUMS)[5]
             }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
-                lineNumber: 44,
+                fileName: "src/components/buttons/Buttons.jsx",
+                lineNumber: 43,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                children: (0, _types.NUMS)[1]
+                children: (0, _actions.NUMS)[6]
             }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
+                fileName: "src/components/buttons/Buttons.jsx",
+                lineNumber: 44,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ButtonOperation, {
+                children: (0, _actions.OPS).Sub
+            }, void 0, false, {
+                fileName: "src/components/buttons/Buttons.jsx",
                 lineNumber: 46,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                children: (0, _types.NUMS)[2]
+                children: (0, _actions.NUMS)[1]
             }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
-                lineNumber: 47,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                children: (0, _types.NUMS)[3]
-            }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
+                fileName: "src/components/buttons/Buttons.jsx",
                 lineNumber: 48,
                 columnNumber: 13
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ButtonOperation, {
-                children: (0, _types.OPS).Add
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                children: (0, _actions.NUMS)[2]
             }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
+                fileName: "src/components/buttons/Buttons.jsx",
+                lineNumber: 49,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                children: (0, _actions.NUMS)[3]
+            }, void 0, false, {
+                fileName: "src/components/buttons/Buttons.jsx",
                 lineNumber: 50,
                 columnNumber: 13
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                $style: {
-                    gridColumn: "1 / span 2"
-                },
-                children: (0, _types.NUMS)[0]
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ButtonOperation, {
+                children: (0, _actions.OPS).Add
             }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
+                fileName: "src/components/buttons/Buttons.jsx",
                 lineNumber: 52,
                 columnNumber: 13
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                children: (0, _types.NUMS)[","]
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _zeroButtonDefault.default), {
+                children: (0, _actions.NUMS)[0]
             }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
-                lineNumber: 53,
+                fileName: "src/components/buttons/Buttons.jsx",
+                lineNumber: 54,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                children: (0, _actions.NUMS)[","]
+            }, void 0, false, {
+                fileName: "src/components/buttons/Buttons.jsx",
+                lineNumber: 55,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ButtonOperation, {
-                children: (0, _types.OPS).Equ
+                children: (0, _actions.OPS).Equ
             }, void 0, false, {
-                fileName: "src/components/Buttons.jsx",
-                lineNumber: 55,
+                fileName: "src/components/buttons/Buttons.jsx",
+                lineNumber: 57,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
-        fileName: "src/components/Buttons.jsx",
-        lineNumber: 27,
+        fileName: "src/components/buttons/Buttons.jsx",
+        lineNumber: 29,
         columnNumber: 9
     }, this);
 }
@@ -29830,12 +29837,12 @@ $RefreshReg$(_c3, "ButtonCommand");
 $RefreshReg$(_c4, "ButtonOperation");
 $RefreshReg$(_c5, "Buttons");
 
-  $parcel$ReactRefreshHelpers$2e05.postlude(module);
+  $parcel$ReactRefreshHelpers$9bc3.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","styletron-react":"fmhJC","./common/Button":"iooOH","../constants/types":"avu8v","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iooOH":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","styletron-react":"fmhJC","../common/Button":"iooOH","../../constants/actions":"jf3id","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/ZeroButton":"2Gdev"}],"iooOH":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6075 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -29853,10 +29860,11 @@ const StyledRoot = (0, _styletronReact.styled)("div", {
     alignItems: "center",
     borderRadius: "10vh",
     textAlign: "center",
-    fontSize: "4vh",
+    fontSize: "5vh",
     backgroundColor: "#343434",
     userSelect: "none",
-    cursor: "pointer"
+    cursor: "pointer",
+    color: "#fff"
 });
 function Button({ Root =StyledRoot , children , ...props }) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Root, {
@@ -29865,7 +29873,7 @@ function Button({ Root =StyledRoot , children , ...props }) {
         children: children
     }, void 0, false, {
         fileName: "src/components/common/Button.jsx",
-        lineNumber: 17,
+        lineNumber: 18,
         columnNumber: 9
     }, this);
 }
@@ -29879,7 +29887,7 @@ $RefreshReg$(_c, "Button");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","styletron-react":"fmhJC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"avu8v":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","styletron-react":"fmhJC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jf3id":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "OPS", ()=>OPS);
@@ -29911,6 +29919,102 @@ const NUMS = {
     ",": ","
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["1xC6H","8BXtR","bB7Pu"], "bB7Pu", "parcelRequire0e10")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2Gdev":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d8de = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d8de.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _styletronReact = require("styletron-react");
+var _button = require("../../common/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _s = $RefreshSig$();
+function ZeroButton({ children , ...props }) {
+    _s();
+    const [css] = (0, _styletronReact.useStyletron)();
+    const buttonClass = css({
+        gridColumn: "1 / span 2",
+        justifyContent: "flex-start"
+    });
+    const wrapperClass = css({
+        display: "flex",
+        justifyContent: "center",
+        width: "10vh",
+        pointerEvents: "none"
+    });
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+        className: buttonClass,
+        ...props,
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: wrapperClass,
+            children: children
+        }, void 0, false, {
+            fileName: "src/components/buttons/components/ZeroButton.jsx",
+            lineNumber: 21,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/buttons/components/ZeroButton.jsx",
+        lineNumber: 20,
+        columnNumber: 9
+    }, this);
+}
+exports.default = ZeroButton;
+_s(ZeroButton, "ISoKAGhVkynXPaVlyqT1djxzzZE=", false, function() {
+    return [
+        (0, _styletronReact.useStyletron)
+    ];
+});
+_c = ZeroButton;
+var _c;
+$RefreshReg$(_c, "ZeroButton");
+
+  $parcel$ReactRefreshHelpers$d8de.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","styletron-react":"fmhJC","../../common/Button":"iooOH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2EjYs":[function(require,module,exports) {
+module.exports = require("3bfa80df56310061").getBundleURL("UckoE") + "Pragmatica-ExtraLight.9da07d22.ttf" + "?" + Date.now();
+
+},{"3bfa80df56310061":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}]},["1xC6H","8BXtR","bB7Pu"], "bB7Pu", "parcelRequire0e10")
 
 //# sourceMappingURL=index.3d214d75.js.map
