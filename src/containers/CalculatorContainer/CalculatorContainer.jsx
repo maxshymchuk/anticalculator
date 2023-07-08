@@ -68,6 +68,7 @@ export default function CalculatorContainer() {
 
             if (e.target.innerText === OPERATIONS.Equ) {
                 setCurrentOperation(undefined);
+                setToReset(true);
                 const newResult = toString(calculator.result);
                 setResult(newResult);
                 return;
