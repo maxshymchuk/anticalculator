@@ -1,4 +1,10 @@
-export const OPS = {
+export const TYPE = {
+    Command: 'Command',
+    Symbol: 'Symbol',
+    Operation: 'Operation'
+}
+
+export const OPERATIONS = {
     Div: '/',
     Mul: '*',
     Sub: '-',
@@ -6,7 +12,7 @@ export const OPS = {
     Equ: '='
 };
 
-export const CMDS = {
+export const COMMANDS = {
     Clear: 'AC',
     Reverse: '+/-',
     Percentage: '%'

@@ -1,7 +1,7 @@
 import {useStyletron} from "styletron-react";
-import Button from "../../common/Button";
+import BaseButton from "../../BaseButton/BaseButton";
 
-export default function ZeroButton({ children, ...props }) {
+function ZeroButton({ children, ...props }) {
     const [css] = useStyletron();
 
     const buttonClass = css({
@@ -17,10 +17,10 @@ export default function ZeroButton({ children, ...props }) {
     });
 
     return (
-        <Button className={buttonClass} {...props}>
+        <BaseButton className={buttonClass} {...props}>
             <div className={wrapperClass}>
                 {children}
             </div>
-        </Button>
+        </BaseButton>
     );
 }
